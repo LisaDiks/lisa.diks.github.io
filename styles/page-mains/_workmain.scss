@@ -1,0 +1,174 @@
+//
+// workmain.scss
+// --------------------------------------------------
+
+$animate: all 0.2s ease-in-out;
+
+
+.work__main {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .info-balk {
+            display: flex;
+            justify-content: center;
+            align-items: cneter;
+            width: 80%;
+            margin: 70px 0;
+            background-color: $grayLight;
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 1.2;
+            padding: 18px 10px;
+            text-align: center;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin: 50px 0;
+                font-size: 22px;
+            }
+        }
+
+        .work-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            margin: 0;
+            margin-bottom: 100px;
+
+            h1 {
+                display: flex;
+                justify-content: left;
+                align-items: flex-start;
+                font-family: 'Fredericka the Great';
+                font-weight: normal;
+                padding: 0;
+                margin: 0;
+
+                @media screen and (max-width: 650px) {
+                    font-size: 40px;
+                }
+            }
+            .underline {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                padding: 0 50px;
+                margin: 0 0 30px;
+
+                .hover {
+                    transition: $animate;
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        width: 0px;
+                        height: 4px;
+                        margin: 5px 0 0;
+                        transition: $animate;
+                        transition-duration: 0.75s;
+                        opacity: 0;
+                        background-color: darken( $c1 , 5%);
+                    }
+                    &.hover-1 {
+                    &:before,
+                    &:after {
+                        left: 0;
+                    }
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    .hover {
+                      &:before,
+                      &:after {
+                        width: 100%;
+                        opacity: 1;
+                      }
+                    }
+                }
+            }
+
+            .border {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 3px $black;
+                margin: 30px 50px 20px 50px;
+
+                &:hover {
+                    background-color: $c1;
+                    transition: 0.8s;
+                    cursor: pointer;
+                }
+
+                @media screen and (max-width:650px) {
+                    border: solid 2px $black;
+                }
+                
+                .foto {
+                    width: 250px;
+                    height: 200px;
+                    margin: 55px 120px;
+
+                    @media screen and (max-width:650px) {
+                        width: 150px;
+                        height: 120px;
+                        margin: 30px 60px;
+                    }
+                }
+
+                .video {
+                    width: 200px;
+                    height: 200px;
+                    margin: 55px 145px;
+
+                    @media screen and (max-width:650px) {
+                        width: 120px;
+                        height: 120px;
+                        margin: 30px 80px;
+                    }
+                }
+
+                .designs {
+                    width: 250px;
+                    height: 240px;
+                    margin: 35px 120px;
+
+                    @media screen and (max-width:650px) {
+                        width: 150px;
+                        height: 140px;
+                        margin: 20px 65px;
+                    }
+                }
+
+                .websites {
+                    width: 200px;
+                    height: 200px;
+                    margin: 55px 145px;
+
+                    @media screen and (max-width:650px) {
+                        width: 120px;
+                        height: 120px;
+                        margin: 30px 80px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+

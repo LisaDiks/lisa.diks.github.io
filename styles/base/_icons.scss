@@ -1,0 +1,22 @@
+//
+// Icons.scss
+// --------------------------------------------------
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	vertical-align: top;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+
+	span,
+	svg,
+	path {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.icon {
+	width: 48px;
+	height: 48px;
+}

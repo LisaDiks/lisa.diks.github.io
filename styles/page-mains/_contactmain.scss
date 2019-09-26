@@ -1,0 +1,197 @@
+//
+// homeMain.scss
+// --------------------------------------------------
+
+.body-wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.contact__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 48px;
+            font-family: "Fredericka the Great";
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 38px;
+            font-family: "Fredericka the Great";
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1{
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            h1{
+                font-size: 35px;
+                margin: 0 10px;
+            }
+
+            h2 {
+                font-size: 25px;
+                margin: 0 10px;
+            }
+
+            p {
+                font-size: 17px;
+                margin: 0 10px;
+            }
+        }
+
+        .tekst {
+            width: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin: 80px;
+            padding-right: 15%;
+
+            @media screen and (max-width:850px) {
+                padding: 0;
+            }
+        }
+        
+        .info {
+            width: 80%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 320px 320px;
+            grid-auto-rows: minmax(50px, 70px);
+            grid-gap: 10px;
+            align-items: center;
+            
+            h2 {
+                display: flex;
+                align-items: flex-start;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                display: flex;
+                align-items: flex-end;
+                margin: 0; 
+                padding: 0;
+            }
+
+            @media screen and (max-width: 680px) {
+                grid-template-columns: 200px 200px;
+                grid-auto-rows: minmax(20px, 50px);
+            }
+
+            @media screen and (max-width:480px) {
+
+            }
+        }
+
+        .formulier {
+            width: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            font-size: 30px;
+            margin: 80px;
+
+            @media screen and (max-width: 570px) {
+                margin: 80px 10px;
+            }
+            
+            form {
+                width: 100%;
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+
+                    li {
+                        width: 100%;
+                        margin: 0;
+
+                        p {
+                            margin: 30px 0 5px 0;
+                            
+                        }
+
+                        input, textarea {
+                            height: 60px;
+                            width: 80%;
+                            background-color: $c1;
+                            border: solid 1px #FDC0D2;
+                            border-radius: 5px;
+                            outline: none;
+                            transition: 1s;
+                            padding: 15px 15px;
+                            font-size: 22px;
+            
+                            &:focus { 
+                                border: rgba(255, 0, 119, 0.79) solid 2px;
+                            }
+
+                            @media screen and (max-width: 760px) {
+                                width: 100%;
+                            }
+
+                        }
+
+                        input[type=submit] {
+                            width: 20%;
+                            padding: 0 10px;
+                            margin: 40px 0;
+            
+                            &:hover {
+                                transition: 0.3s;
+                                transform: translateY(-3px);
+                                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                                border: rgba(255, 0, 119, 0.79) solid 2px;
+                            }
+
+                            @media screen and (max-width: 760px) {
+                                width: 30%;
+                            }
+
+                            @media screen and (max-width: 490px) {
+                                width: 40%;
+                            }
+                        }
+
+                    }
+                }
+    
+
+            }
+        }
+    }
+
+}

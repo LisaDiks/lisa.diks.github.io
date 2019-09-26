@@ -1,0 +1,44 @@
+//
+// Fonts.scss
+// --------------------------------------------------
+
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Exo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo-Light.woff2') format('woff2'),
+        url('../assets/fonts/Exo-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Exo-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Exo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fredericka the Great';
+    src: url('../assets/fonts/FrederickatheGreat-Regular.woff2') format('woff2'),
+        url('../assets/fonts/FrederickatheGreat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

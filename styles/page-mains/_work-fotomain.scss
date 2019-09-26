@@ -1,0 +1,71 @@
+//
+// work-fotomain.scss
+// --------------------------------------------------
+
+.work-foto__main {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .info-balk {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 70px 0;
+            background-color: $grayLight;
+            font-size: 30px;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 1.2;
+            padding: 18px 10px;
+            text-align: center;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin: 50px 0;
+                font-size: 22px;
+            }
+        }
+
+        .fotos {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0px 200px 0;
+            padding: 0 100px;
+
+            @media screen and (max-width: 1320px) {
+                padding: 0;
+            }
+
+            @media screen and (max-width: 745px) {
+                margin: 30px 0 80px 0;
+            }
+
+            .box {
+                margin: 40px 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 332px;
+                width: 332px;
+                //border: solid 1px black;
+
+                @media screen and (max-width: 650px) {
+                    margin: 10px 10px;
+                }
+            }
+        }
+    }
+}

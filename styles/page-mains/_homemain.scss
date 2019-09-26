@@ -1,0 +1,202 @@
+//
+// homeMain.scss
+// --------------------------------------------------
+
+.body-wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        position: relative;
+        margin: 0 auto;
+        width: 1170px;
+        padding: 0 10px;
+    }
+
+    .homepage__carousel {
+        max-width: 840px;
+        margin: 50px auto;
+        border: 1px solid $gray;
+
+        @media screen and (max-width : 880px) {
+            max-width: 525px;
+            max-height: 350px;
+
+            img {
+                max-width: 525px;
+                max-height: 350px;
+            }
+        }
+
+        @media screen and (max-width : 650px) {
+            max-width: 305px;
+            max-height: 220px;
+
+            img {
+                max-width: 305px;
+                max-height: 220px;
+            }
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            max-height: 560px;
+            max-width: 840px;
+
+
+            // h1 {
+            //     position: absolute;
+            //     left: 50px;
+            //     top: 50px;
+            // }
+            
+        }
+    }
+
+    .homepage__buttons {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: space-between;
+        margin: 50px 0;
+
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background-image: url("../assets/content/Home-btn-bg.jpg");
+            padding: 0 60px 0 60px;
+            margin: 30px auto;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            }
+            
+            @media screen and (max-width : 880px) {
+                margin: 15px 10px;
+                padding: 0 40px;
+            }
+
+            @media screen and (max-width : 650px) {
+                padding: 0 40px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(180deg, #FFFFFF 0%, rgba(234,234,234,0.23) 0%, rgba(248,255,254,0.36) 0%, rgba(223,253,250,0.28) 0%, rgba(255,255,255,0.21) 0%, rgba(255,203,246,0.24) 100%);
+                border: 1px solid #979797;
+            }
+
+            .pink-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: 32px;
+                font-weight: 500;
+                text-align: center;
+                position: relative;
+                text-transform: uppercase;
+                background-image: linear-gradient(180deg, #FAE9EF 20%, #FDC0D2 100%);
+                border: 1px solid #979797;
+                color: black;
+                padding: 12px 0;
+                margin: 0;
+
+                &:hover {
+                    text-decoration: none;
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                }
+
+                &:active {
+                    transform: translateY(-1px);
+                    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+                }
+
+                @media screen and (max-width : 880px) {
+                    font-size: 27px;
+                    padding: 2px 0;
+                }
+
+                @media screen and (max-width : 650px) {
+                    font-size: 24px;
+                }
+            }
+
+            .about-img {
+                position: relative;
+                margin: 72px 12px;
+
+                @media screen and (max-width : 880px) {
+                    margin: 42px 12px;
+                }
+
+                @media screen and (max-width : 650px) {
+                    height: 150px;
+                    width: 150px;
+                    margin: 50px 0;
+                }
+            }
+
+            .work-img {
+                position: relative;
+                margin: 74px 0;
+
+                @media screen and (max-width : 880px) {
+                    margin: 44px 0;
+                }
+
+                @media screen and (max-width : 650px) {
+                    height: 150px;
+                    width: 170px;
+                    margin: 50px 12px;
+                }
+            }
+
+            .contact-img {
+                position: relative;
+                margin: 72px 10px;
+
+                @media screen and (max-width : 880px) {
+                    margin: 42px 0px;
+                }
+
+                @media screen and (max-width : 650px) {
+                    height: 150px;
+                    width: 150px;
+                    margin: 50px 0px;
+                }
+            }
+        }
+    }
+}

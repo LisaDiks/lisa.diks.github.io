@@ -1,0 +1,133 @@
+//
+//  Mixins.scss
+//
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Fix mqs
+// -------------------------
+$fix-mqs: false !default;
+@mixin respond-min($width) {
+    // If we're outputting for a fixed media query set...
+    @if $fix-mqs {
+        // ...and if we should apply these rules...
+        @if $fix-mqs >= $width {
+            // ...output the content the user gave us.
+            @content;
+        }
+    }
+    @else {
+        // Otherwise, output it using a regular media query
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+// EM Calculator
+// -------------------------
+@function em($px, $base: 14px) {
+    @return ($px / $base) * 1em;
+}
+
+// REM Calculator
+// -------------------------
+@function rem($sizeValue) {
+  @return ($sizeValue / 16) + rem;
+}
+
+// Clearfix
+// -------------------------
+@mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Placeholder text
+// -------------------------
+@mixin placeholder($color: $placeholderText) {
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+}
+
+// Text overflow
+// -------------------------
+@mixin text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// CSS image replacement
+// -------------------------
+@mixin hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+// Resize anything
+@mixin resizable($direction) {
+    resize: $direction; // Options: horizontal, vertical, both
+    overflow: auto; // Safari fix
+}
+
+
+// Create flexbox based columns
+// Use on flex-items
+// Flex-container should have:
+    // display: flex;
+    // flex-wrap: wrap;
+
+    @mixin flex-grid($col, $margin:0, $marginTop:''){
+        $gutters: $col - 1;
+        $item-width: calc(#{100% / $col} - #{$margin / $col * $gutters});
+    
+        @if $marginTop == '' {
+            $marginTop: $margin;
+        } @else {
+            $marginTop: $marginTop;
+        }
+    
+        @if $col > 1 {
+            width: $item-width;
+        } @else {
+            width: 100%;
+        }
+    
+        &:nth-child(#{$col}n+#{$col}) {
+            margin-right: 0;
+        }
+    
+        &:not(:nth-child(#{$col}n+#{$col})) {
+            margin-right: $margin;
+        }
+    
+        &:nth-child(-n+#{$col}) {
+            margin-top: 0;
+        }
+    
+        &:not(:nth-child(-n+#{$col})) {
+            margin-top: $marginTop;
+        }
+    }
+

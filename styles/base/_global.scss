@@ -1,0 +1,262 @@
+//
+//  Basic.scss
+//
+
+// =============================================================================
+// HTML5 display definitions
+// =============================================================================
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, nav, section {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+// =============================================================================
+// Base
+// =============================================================================
+html {
+    position: relative;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    font-family: $baseFontFamily;
+    font-size: $baseFontSizeSmall;
+    line-height: $baseLineHeight;
+    margin: 0;
+    color: $textColor;
+    background: $bodyBackground;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    @include respond-min($tablet) {
+        font-size: $baseFontSize;
+    }
+
+    &.active {
+        overflow-x: hidden;
+    }
+
+    &.is-fixed {
+		position: fixed;
+	}
+}
+
+::-moz-selection {
+    background: lighten($c3, 10%);
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: lighten($c3, 10%);
+    color: $white;
+    text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+   color: rgba($textColor, .5);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba($textColor, .5);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba($textColor, .5);
+}
+
+:-ms-input-placeholder {
+    color: rgba($textColor, .5);
+}
+
+// =============================================================================
+// Links
+// =============================================================================
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+    text-decoration: underline;
+    color: $linkColorHover;
+}
+
+a[role=button] {
+    cursor: pointer;
+}
+
+a[href^=tel] {
+    @include respond-min($desktop) {
+        pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        cursor: default !important;
+    }
+}
+
+// =============================================================================
+// Typography
+// =============================================================================
+abbr[title]         { border-bottom: 1px dotted; }
+b, strong           { font-weight: bold; }
+blockquote          { margin: 1em 40px; }
+q                   { quotes: none; }
+q:before, q:after   { content: ""; content: none; }
+small               { font-size: 85%; }
+sub, sup            { font-size: 75%; vertical-align: baseline; }
+sup                 { top: -0.3em; position: relative; }
+
+%h1, %h2, %h3, %h4 {
+    color: $headingsColor;
+    font-family: $headingsFontFamily;
+}
+
+%h1 {
+    margin: 0 0 .5em;
+    font-size: 48px;
+    line-height: 1.2em;
+}
+
+%h2 {
+    margin: 0 0 .5em;
+    font-size: 24px;
+    line-height: 1em;
+}
+
+%h3 {
+    margin: 0 0 .5em;
+    font-size: 18px;
+    line-height: 1em;
+}
+
+%h4 {
+    margin: 0 0 .5em;
+    font-size: 14px;
+    line-height: 1em;
+}
+
+%text-small {
+    margin: 0 0 2em;
+    font-size: 12px;
+    line-height: $baseLineHeight;
+}
+
+%text-normal {
+    margin: 0 0 2em;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+}
+
+%text-large {
+    margin: 0 0 2em;
+    font-size: 18px;
+    line-height: $baseLineHeight;
+}
+
+h1 {
+    @extend %h1;
+}
+
+h2 {
+    @extend %h2;
+}
+
+h3 {
+    @extend %h3;
+}
+
+h4 {
+    @extend %h4;
+}
+
+p, .text-normal {
+    @extend %text-normal;
+}
+
+.text-small {
+    @extend %text-small;
+}
+
+.text-large {
+    @extend %text-large;
+}
+
+/* =============================================================================
+   Figures and images
+   ========================================================================== */
+svg:not(:root){
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: auto\9; /* IE7-8 need help adjusting responsive images */
+    height: auto; /* Part 2: Scale the height according to the width, otherwise you get stretching */
+
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+// Prevent max-width from affecting Google Maps
+#map_canvas img,
+#map img {
+    max-width: none;
+}
+
+.msg-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: $white;
+    z-index: 100;
+    border-bottom: 1px solid $grayLighter;
+
+    .container {
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+}

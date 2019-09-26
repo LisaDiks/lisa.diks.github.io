@@ -1,0 +1,90 @@
+//
+// work-fotomain.scss
+// --------------------------------------------------
+
+.work-video__main {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .info-balk {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 70px 0;
+            background-color: $grayLight;
+            font-size: 30px;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 1.2;
+            padding: 18px 10px;
+            text-align: center;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin: 50px 0;
+                font-size: 22px;
+            }
+
+        }
+
+        .videos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 0 100px 0;
+        }
+
+        p {
+            font-size: 26px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin: 0;
+
+            @media screen and (max-width:880px) {
+                font-size: 23px;
+            }
+
+            @media screen and (max-width:630px) {
+                font-size: 18px;
+                margin: 0 10px;
+                text-align: center;
+            }
+        }
+
+        hr {
+            width: 50%;
+            color: $grayLight;
+            margin: 20px 0 50px 0;
+
+            @media screen and (max-width:880px) {
+                width: 80%;
+            }
+        }
+
+
+        video {
+            margin: 50px;
+
+            &:hover {
+                border: solid 3px $c1;
+            }
+
+            @media screen and (max-width:880px) {
+                width: 90%;
+            }
+            
+        }
+
+    }
+}

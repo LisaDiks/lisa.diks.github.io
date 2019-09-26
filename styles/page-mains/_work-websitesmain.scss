@@ -1,0 +1,108 @@
+//
+// work-websitesmain.scss
+// --------------------------------------------------
+
+.work-websites__main {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .info-balk {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 70px 0;
+            background-color: $grayLight;
+            font-size: 30px;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 1.2;
+            padding: 18px 10px;
+            text-align: center;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin: 50px 0;
+                font-size: 22px;
+            }
+        }
+
+        .websites {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0 100px 0;
+
+            .img {
+                width: 1040px;
+                height: 580px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                background-image: url("../assets/content/Ss-industrious-pc.png");
+                background-position: center;
+                background-size: cover;
+                margin: 0 30px 40px 30px;
+
+                    &:hover {
+                        border: solid 3px $c1;
+                    }
+
+                    @media screen and (max-width:1060px) {
+                        background-image: url("../assets/content/Ss-industrious-tab.png");
+                        width: 560px;
+                        height: 750px;
+                    }
+    
+                    @media screen and (max-width:650px) {
+                        width: 270px;
+                        height: 480px;
+                        background-image: url("../assets/content/Ss-industrious-mob.png");
+                    }
+            }
+
+            p {
+                font-size: 26px;
+                font-weight: 300;
+                margin: 0;
+    
+                @media screen and (max-width:880px) {
+                    font-size: 23px;
+                }
+    
+                @media screen and (max-width:630px) {
+                    font-size: 18px;
+                    margin: 0 20px;
+                    text-align: center;
+                }
+            }
+    
+            hr {
+                width: 60%;
+                color: $grayLight;
+                margin: 20px 0 50px 0;
+    
+                @media screen and (max-width:880px) {
+                    width: 80%;
+                }
+            }
+
+            
+        }
+        
+    }
+
+}
+

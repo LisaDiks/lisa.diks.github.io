@@ -1,0 +1,35 @@
+// Core variable and mixins
+@import "./generic/mixins";               // Mixins
+@import "./generic/settings";             // Custom colors, variables, etc
+@import "./base/fonts";
+
+// CSS Reset
+@import "./base/global";                  // Basic HTML element styling
+
+// Base CSS
+@import "./base/forms";
+@import "./components/buttons";
+
+// Components: common
+@import "./base/icons";
+@import "./components/responsive-video";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/footer";
+
+// Helper classes
+@import "./generic/helper";
+
+// Print
+@import "./base/print"; // Has to be last to override when necessary
+
+//Main 
+@import "./page-mains/homemain";
+@import "./components/swiper";
+@import "./page-mains/aboutmain";
+@import "./page-mains/workmain";
+@import "./page-mains/work-fotomain";
+@import "./page-mains/work-videomain";
+@import "./page-mains/work-designmain";
+@import "./page-mains/work-websitesmain";
+@import "./page-mains/contactmain";

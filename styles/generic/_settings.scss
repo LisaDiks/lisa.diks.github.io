@@ -1,0 +1,55 @@
+//
+//  Settings.scss
+//
+
+// Global values
+// --------------------------------------------------
+
+// Custom colors
+// -------------------------
+$c1:            #FFDEE7 !default;
+$c2:            #2e9ce5 !default;
+$c3:            #d835a7 !default;
+
+// Accent colors
+// -------------------------
+$black:         #000 !default;
+$grayDarker:    #222 !default;
+$grayDark:      #333 !default;
+$gray:          #555 !default;
+$grayLight:     #D8D8D8 !default;
+$grayLighter:   #eee !default;
+$white:         #fff !default;
+
+// Scaffolding
+// -------------------------
+$bodyBackground:    $white !default;
+$textColor:         $grayDark !default;
+
+// Links
+// -------------------------
+$linkColor:         $c1 !default;
+$linkColorHover:    lighten($linkColor, 10%) !default;
+
+// States
+// -------------------------
+$errorColor:        #e5352e !default;
+$successColor:      #35d87f !default;
+
+// Typography
+// -------------------------
+$baseFontFamily:    'Exo', Arial, sans-serif;
+$baseFontSizeSmall: 14px !default;
+$baseFontSize:      16px !default;
+$baseLineHeight:    1.6em !default; // = Lineheight / fontsize
+
+// Headings
+$headingsFontFamily:    $baseFontFamily;
+$headingsColor:         $black;
+
+// Breakpoints
+// -------------------------
+$mobile:    480px;
+$tablet:    760px;
+$desktop:   990px;
+$wide:      1280px
