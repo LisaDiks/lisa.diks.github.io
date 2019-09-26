@@ -1,0 +1,63 @@
+<header class="header" role="banner">
+    <div class="container">
+        <button class="nav-link" id="open-button" type="button" role="button" aria-label="Open navigatie">
+            <span class="lines"></span> <span class="nav-link--content">Menu</span>
+        </button>
+        <a class="header__logo" href="#" title="Logo van bedrijfsnaam">
+            <span>Titel</span>
+        </a>
+        <ul id="skip">
+            <li><a href="#nav"><span>Direct naar:</span>Navigatie</a></li>
+            <li><a href="#header__search"><span>Direct naar:</span>Zoeken</a></li>
+            <li><a href="#sitemap"><span>Direct naar:</span>Sitemap</a></li>
+        </ul>
+        <form class="header__search" id="header__search" action="#" method="get">
+            <div class="header__search--container" role="search">
+                <fieldset class="labels-hidden">
+                    <label for="s">Zoeken</label>
+                    <input class="text" id="s" type="search" name="s" placeholder="Voer hier uw zoekopdracht in" required="required">
+                    <input class="btn btn--search" type="submit" name="" value="Zoeken" title="Zoeken door de website">
+                </fieldset>
+            </div>
+        </form>
+        <nav id="nav" class="nav" role="navigation">
+            <div class="nav__main">
+                <ul>
+                    <li>
+                        <a href="#" title="">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Diensten</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" title="">Klantcases</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Over ons</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Subitem 1</a></li>
+                                <li><a href="#">Subitem 2</a></li>
+                                <li><a href="#">Subitem 3 met lorem ipsum Lorem ipsum dolor sit</a></li>
+                                <li><a href="#">Subitem 4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- /nav__main -->
+            <div class="nav__meta">
+                <ul>
+                    <li>
+                        <a href="#" title="">Item 1</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" title="">Item 2</a>
+                    </li>
+                    <li>
+                        <a href="#" title="">Item 3</a>
+                    </li>
+                </ul>
+            </div><!-- /nav__meta -->
+        </nav>
+    </div>
+</header>
