@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Development starter</title>
+        <style>
+            body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        table {
+            float: left;
+            width: 100%;
+        }
+
+        table a {
+            display: block;
+            font-size: 1.200em;
+            color: #000;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        thead th {
+            background: #ee9026;
+            color: #fff;
+            text-align: left;
+        }
+
+        th, td, caption {
+            vertical-align: middle;
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+
+        tbody tr:nth-child(even) th,
+        tbody tr:nth-child(even) td{
+            background: #f6f6f3;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #main {
+            position: relative;
+            overflow: hidden;
+            padding: 50px 0;
+        }
+
+        h1 {
+            line-height: 35px;
+            margin: 0 0 25px;
+        }
+
+        #legenda {
+            width: 100%;
+            margin: 0 0 1em;
+        }
+
+        #legenda ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #legenda li {
+            margin: 0 0 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        #legenda li img {
+            margin: 0 10px 0 0;
+            float: left;
+        }
+
+        #legenda span {
+            display: block;
+            padding: 5px 0;
+        }
+    </style>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="main" role="main">
+                <h1>Template overzicht</h1>
+                <div id="legenda">
+                    <h3>Legenda</h3>
+                    <ul>
+                        <li><img src="assets/template-overview/icon-notpresent.png" alt="flag" /> <span>Template nog niet aanwezig</span></li>
+                        <li><img src="assets/template-overview/icon-inprogress.png" alt="In progress" /> <span>Template work in progress</span></li>
+                        <li><img src="assets/template-overview/icon-finished.png" alt="Ready" /> <span>Template klaar</span></li>
+                        <li><img src="assets/template-overview/icon-notapproved.png" alt="Nog niet akkoord" /> <span>Template nog niet akkoord door de klant</span></li>
+                        <li><img src="assets/template-overview/icon-approved.png" alt="Approved" /> <span>Template door de klant akkoord</span></li>
+                    </ul>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Template naam:</th>
+                            <th>Beschrijving / opmerkingen</th>
+                            <th>Status</th>
+                            <th>Akkoord</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="1">
+                            <td>T1</td>
+                            <td><a href="home.html">Homepage</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-inprogress.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T2</td>
+                            <td><a href="about.html">About</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-inprogress.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T3</td>
+                            <td><a href="work.html">Work</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-inprogress.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T4</td>
+                            <td><a href="work-fotos.html">Work Fotos</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-notpresent.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T5</td>
+                            <td><a href="work-designs.html">Work Designs</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-notpresent.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T6</td>
+                            <td><a href="work-videos.html">Work Videos</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-notpresent.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T7</td>
+                            <td><a href="work-websites.html">Work Websites</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-notpresent.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                        <tr id="1">
+                            <td>T8</td>
+                            <td><a href="contact.html">Contact</a></td>
+                            <td></td>
+                            <td><img src="assets/template-overview/icon-notpresent.png" alt=""></td>
+                            <td><img src="assets/template-overview/icon-notapproved.png" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table><!-- table -->
+            </div><!-- main -->
+        </div><!-- container -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="style.js"></script>
+    </body>
+
+</html>
