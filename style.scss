@@ -1,5 +1,5 @@
 // Core variable and mixins
-@import "./generic/mixins";               // Mixins
+@import "./mixins";               // Mixins
 @import "./generic/settings";             // Custom colors, variables, etc
 @import "./base/fonts";
 
@@ -8,14 +8,14 @@
 
 // Base CSS
 @import "./base/forms";
-@import "./components/buttons";
+@import "./buttons";
 
 // Components: common
-@import "./base/icons";
-@import "./components/responsive-video";
-@import "./components/header";
-@import "./components/nav";
-@import "./components/footer";
+@import "./icons";
+@import "./responsive-video";
+@import "./header";
+@import "./nav";
+@import "./footer";
 
 // Helper classes
 @import "./generic/helper";
@@ -24,12 +24,12 @@
 @import "./base/print"; // Has to be last to override when necessary
 
 //Main 
-@import "./page-mains/homemain";
-@import "./components/swiper";
-@import "./page-mains/aboutmain";
-@import "./page-mains/workmain";
-@import "./page-mains/work-fotomain";
-@import "./page-mains/work-videomain";
-@import "./page-mains/work-designmain";
-@import "./page-mains/work-websitesmain";
-@import "./page-mains/contactmain";
+@import "./homemain";
+@import "./swiper";
+@import "./aboutmain";
+@import "./workmain";
+@import "./work-fotomain";
+@import "./work-videomain";
+@import "./work-designmain";
+@import "./work-websitesmain";
+@import "./contactmain";
