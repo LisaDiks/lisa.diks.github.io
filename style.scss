@@ -1,13 +1,13 @@
 // Core variable and mixins
 @import "./mixins";               // Mixins
-@import "./generic/settings";             // Custom colors, variables, etc
-@import "./base/fonts";
+@import "./settings";             // Custom colors, variables, etc
+@import "./fonts";
 
 // CSS Reset
-@import "./base/global";                  // Basic HTML element styling
+@import "./global";                  // Basic HTML element styling
 
 // Base CSS
-@import "./base/forms";
+@import "./forms";
 @import "./buttons";
 
 // Components: common
@@ -18,10 +18,10 @@
 @import "./footer";
 
 // Helper classes
-@import "./generic/helper";
+@import "./helper";
 
 // Print
-@import "./base/print"; // Has to be last to override when necessary
+@import "./print"; // Has to be last to override when necessary
 
 //Main 
 @import "./homemain";
